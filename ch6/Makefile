@@ -8,7 +8,7 @@ vet: fmt
 	go vet ./...
 
 build: vet
-	go build -o main .
+	go build -gcflags="-m" -o main .
 
 all: build
 	@echo "==="
